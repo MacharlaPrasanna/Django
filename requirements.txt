@@ -1,0 +1,7 @@
+
+flask
+mysql-connector-python
+python-dotenv
+django==4.2.7
+mysqlclient>=2.0
+Pillow
