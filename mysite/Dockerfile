@@ -19,12 +19,12 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Upgrade pip and install Python dependencies
-COPY requirements.txt .
+COPY mysite/requirements.txt .
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application
-COPY . .
+COPY mysite .
 
 # Expose Django port
 EXPOSE 8000
