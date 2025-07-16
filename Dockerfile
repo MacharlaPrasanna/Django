@@ -6,6 +6,7 @@ RUN apt-get update && \
     apt-get install -y \
         libmariadb-dev \
         libmariadb-dev-compat \
+        pkg-config \
         build-essential \
         gcc \
         libssl-dev \
@@ -14,6 +15,7 @@ RUN apt-get update && \
         libxslt1-dev \
         zlib1g-dev \
     && rm -rf /var/lib/apt/lists/*
+
 
 
 COPY requirements.txt .
