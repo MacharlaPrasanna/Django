@@ -3,5 +3,5 @@ flask
 mysql-connector-python
 python-dotenv
 django==4.2.7
-mysqlclient
+mysqlclient>=2.2.0
 Pillow
