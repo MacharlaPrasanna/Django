@@ -8,6 +8,11 @@ ENV PYTHONUNBUFFERED=1
 # Set working directory
 WORKDIR /app
 
+RUN apt-get update \
+    && apt-get install -y default-libmysqlclient-dev build-essential \
+    && pip install mysqlclient
+
+
 # Upgrade pip and install dependencies
 COPY requirements.txt .
 RUN pip install --upgrade pip
