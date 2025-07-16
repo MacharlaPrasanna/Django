@@ -2,10 +2,10 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Install system dependencies for mysqlclient
 RUN apt-get update && \
     apt-get install -y \
-        default-libmysqlclient-dev \
+        libmariadb-dev \
+        libmariadb-dev-compat \
         build-essential \
         gcc \
         libssl-dev \
@@ -13,8 +13,8 @@ RUN apt-get update && \
         libxml2-dev \
         libxslt1-dev \
         zlib1g-dev \
-        libmysqlclient-dev \
     && rm -rf /var/lib/apt/lists/*
+
 
 COPY requirements.txt .
 RUN pip install --upgrade pip
