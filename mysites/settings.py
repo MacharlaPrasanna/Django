@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'register',
         'USER': 'root',
         'PASSWORD': 'root',
-        'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': '3307',
 'OPTIONS': {
             'charset': 'utf8mb4',
