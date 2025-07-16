@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'register',
         'USER': 'root',
         'PASSWORD': 'root',
-        'HOST': 'host.docker.internal',
+        'HOST': 'localhost',
         'PORT': '3307',
 'OPTIONS': {
             'charset': 'utf8mb4',
